@@ -17,12 +17,7 @@ public class UserServlet extends HttpServlet {
 
 
     public UserServlet() {
-        try{
-            mongoClient = MongoClients.create("mongodb://192.168.42.128:27017");
-            System.out.println("数据库连接成功");}
-        catch (Exception e){
-            System.out.println("数据库连接失败");
-        }
+        mongoClient = MongoClients.create("mongodb://192.168.42.128:27017");
     }
 
     public void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException
